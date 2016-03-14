@@ -1,4 +1,4 @@
-/**
+/** boilerplate
  * Checks if two arrays have the same first value
  * @param  {Array} a
  * @param  {Array} b
