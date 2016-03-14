@@ -1,10 +1,16 @@
-/** boilerplate
+/**
  * Checks if two arrays have the same first value
  * @param  {Array} a
  * @param  {Array} b
  * @return {Boolean}
  */
 function sameFirst(a, b) {
+
+  if (a[0] === b[0]) {
+    return true;
+  } else {
+    return false;
+  }
 
 }
 
@@ -15,7 +21,15 @@ function sameFirst(a, b) {
  * @return {Boolean}
  */
 function deepEquals(a, b) {
+  for (var i = 0; i < a.length; i++) {
 
+  if (a === b) {
+    return true;
+  } else {
+    return false;
+  }
+
+}
 }
 
 function arraySum(arr) {
