@@ -1,7 +1,19 @@
 'use strict';
 
+/**
+ * Returns number of items in neighbors that are true
+ * @param  {Array} neighbors
+ * @return {Number}
+ */
 function aliveNeighbors(neighbors) {
+  var sum = 0;
 
+  for (var i = 0; i < neighbors.length; i++) {
+    if (neighbors[i] == true) {
+  sum++;
+  }
+}
+return sum;
 }
 
 /**
@@ -11,6 +23,13 @@ function aliveNeighbors(neighbors) {
  */
 function aliveEh(neighbors) {
 
+   if (aliveNeighbors(neighbors) == 2 || aliveNeighbors(neighbors) == 3) {
+    return true;
+  }  else {
+    return false;
+  }
+
+
 }
 
 /**
@@ -19,5 +38,10 @@ function aliveEh(neighbors) {
  * @return {Boolean}
  */
 function reviveEh(neighbors) {
+  if (aliveNeighbors(neighbors) == 3) {
+    return true;
+  } else {
+    return false;
+  }
 
 }
