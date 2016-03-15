@@ -23,13 +23,17 @@ function sameFirst(a, b) {
 function deepEquals(a, b) {
   for (var i = 0; i < a.length; i++) {
 
-    if (a === b) {
-      return true;
-    } else {
+    if (a[i] != b[i]) {
       return false;
     }
 
+    if (a.length != b.length) {
+      return false;
+    }
+
+
   }
+    return true;
 }
 
 function arraySum(arr) {
