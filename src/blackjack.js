@@ -8,11 +8,11 @@ function cardValue(cardName) {
     return 10;
   } else if (cardName === 'ace') {
     return 11;
-  } else if (cardName === '5') {
+  } else if (cardName == '5') {
     return 5;
-  } else if (cardName === '9') {
+  } else if (cardName == '9') {
     return 9;
-  } else if (cardName === '10') {
+  } else if (cardName == '10') {
     return 10;
   }
 }
@@ -49,8 +49,10 @@ function shouldSplit(cardOne, cardTwo) {
  * @return {Boolean}
  */
 function shouldHit(cardOne, cardTwo) {
-
-  if (sum(cardValue(cardOne), cardValue(cardTwo)) < 17) {
+  if (sum(cardValue(cardOne), cardValue(cardTwo)) > 17) {
+    return false;
+  }
+  else if (sum(cardValue(cardOne), cardValue(cardTwo)) < 17) {
     return true;
   } else {
     return false;
