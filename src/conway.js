@@ -23,6 +23,12 @@ return sum;
  */
 function aliveEh(neighbors) {
 
+   if (aliveNeighbors(neighbors) == 2 || aliveNeighbors(neighbors) == 3) {
+    return true;
+  }  else {
+    return false;
+  }
+
 
 }
 
@@ -32,5 +38,10 @@ function aliveEh(neighbors) {
  * @return {Boolean}
  */
 function reviveEh(neighbors) {
+  if (aliveNeighbors(neighbors) == 3) {
+    return true;
+  } else {
+    return false;
+  }
 
 }
