@@ -6,7 +6,14 @@
  * @return {Number}
  */
 function aliveNeighbors(neighbors) {
+  var sum = 0;
 
+  for (var i = 0; i < neighbors.length; i++) {
+    if (neighbors[i] == true) {
+  sum++;
+  }
+}
+return sum;
 }
 
 /**
@@ -15,6 +22,7 @@ function aliveNeighbors(neighbors) {
  * @return {Boolean}
  */
 function aliveEh(neighbors) {
+
 
 }
 
